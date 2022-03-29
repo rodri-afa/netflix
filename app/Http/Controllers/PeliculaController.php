@@ -15,9 +15,14 @@ class PeliculaController extends Controller
      */
     public function index()
     {
-        $pelis = Pelicula::all();
-        echo $pelis;
-        // return view('pelis');
+        // $pelis = Pelicula::all();
+        // echo $pelis;
+        // $segunda = Pelicula::find(2);
+        // echo $segunda;
+        $tarantino = Pelicula::where('director', 'Tarantino')->get();
+        // echo $tarantino;
+
+        return view('pelis', ["peliculas" => $tarantino]);
     }
 
     /**

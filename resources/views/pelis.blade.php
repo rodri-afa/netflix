@@ -410,7 +410,16 @@
 
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         
-            <h1>Mis películas</h1>
+            <h1>Mis películas de Tarantino</h1>
+            @foreach ($peliculas as $peli)
+            <div style="padding:32px; box-shadow: 0 0 6px rgba(0,0,0,0.3); margin-bottom:12px; background-color:#FFF">
+                <h3>{{$peli->titulo}}</h3>
+                <span>{{$peli->año}}</span>
+                <span>{{$peli->director}}</span>
+                <p>{{$peli->sinopsis}}</p>
+            </div>
+                
+            @endforeach
           
         </div>
     </div>
