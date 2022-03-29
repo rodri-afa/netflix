@@ -24,6 +24,12 @@ class PeliculaController extends Controller
 
         return view('pelis', ["peliculas" => $tarantino]);
     }
+    public function apiIndex()
+    {
+        $pelis = Pelicula::all();
+
+        return $pelis;
+    }
 
     /**
      * Show the form for creating a new resource.
